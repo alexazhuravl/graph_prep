@@ -39,3 +39,5 @@ for file in filenames:
     appended_data.append(df_new)
 appended_data = pd.concat(appended_data, axis=0)
 appended_data.to_csv('appended.csv')
+
+
