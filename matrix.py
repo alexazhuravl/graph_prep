@@ -7,7 +7,7 @@ import pandas as pd
 from flatten_json import flatten
 from pandas.io.json import json_normalize
 
-filenames = glob.glob("/path/to/file/filename_*.json")
+filenames = glob.glob("/home/az/dev/atvisor/Test1-20180820/out_file_mappings_*.json")
 appended_data = []
 for file in filenames:
     f = open(file, 'r')
