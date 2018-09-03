@@ -1,12 +1,13 @@
-import pandas as pd
-import numpy as np
-from pandas.io.json import json_normalize
-from flatten_json import flatten
 import ast
-import json
 import glob
+import json
 
-filenames = glob.glob("/home/az/dev/atvisor/Test1-20180820/out_file_mappings_*.json")
+import numpy as np
+import pandas as pd
+from flatten_json import flatten
+from pandas.io.json import json_normalize
+
+filenames = glob.glob("/path/out_file_mappings_*.json")
 appended_data = []
 for file in filenames:
     f = open(file, 'r')
@@ -59,4 +60,3 @@ for y in test_new.index.values.tolist():
             test_new.loc[x, y] = 0
 
 test_new.to_csv('matrix_excluded_mappings.csv')
-
